@@ -1,0 +1,5 @@
+body {
+    background-image: linear-gradient(#d3ff6e, #00faff);
+    /* customize colors here */
+    background-attachment: fixed;
+}

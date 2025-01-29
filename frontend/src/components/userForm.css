@@ -1,0 +1,108 @@
+/* UserForm.css */
+
+
+/* Global Styles */
+
+.form1 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#d3ff6e, #00faff);
+    /* customize colors here */
+    background-attachment: fixed;
+}
+
+.user-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    height: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+/* Title */
+
+.user-form h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* Input Fields */
+
+.user-form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.user-form label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.user-form input[type="text"],
+.user-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.user-form input[type="text"]:focus,
+.user-form input[type="email"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+
+/* Submit Button */
+
+.user-form button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.user-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Message after submission */
+
+.user-form p {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.user-form p.success {
+    color: green;
+}
+
+.user-form p.error {
+    color: red;
+}
