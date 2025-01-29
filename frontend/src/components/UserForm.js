@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './userForm.css'; // Importing the CSS file
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const UserForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -22,14 +24,15 @@ const UserForm = () => {
 
     try {
       // Send POST request to Node.js backend
-      await axios.post('http://localhost:5000/api/users', userData);
+      console.log(baseUrl);
+      await axios.post(`${baseUrl}/api/users`, userData);
       setMessage1('User data submitted successfully!');
       setName('');
       setEmail('');
       setMessage('');
 
     } catch (error) {
-      setMessage('Failed to submit user data.' + error);
+      setMessage1('Failed to submit user data.' + error);
     }
   };
 

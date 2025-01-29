@@ -3,6 +3,8 @@ import axios from "axios";
 
 import './userListIterater.css';
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const UserListIterate = ({ onSelectUser, newStyle }) => {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
@@ -18,7 +20,7 @@ const UserListIterate = ({ onSelectUser, newStyle }) => {
   // Fetch users from API
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/users");
+      const response = await axios.get(`${baseUrl}/api/users`);
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -28,7 +30,7 @@ const UserListIterate = ({ onSelectUser, newStyle }) => {
   // Delete user
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
+      await axios.delete(`${baseUrl}/api/users/${id}`);
       alert("User deleted successfully!");
       fetchUsers(); // Refresh list without reloading
     } catch (error) {
@@ -50,7 +52,7 @@ const UserListIterate = ({ onSelectUser, newStyle }) => {
     if (!newName || !newEmail || !newMessage) return alert("All fields are required!");
 
     try {
-      await axios.put(`http://localhost:5000/api/users/${selectedUser._id}`, {
+      await axios.put(`${baseUrl}/api/users/${selectedUser._id}`, {
         name: newName,
         email: newEmail,
         message: newMessage,

@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 3000;
 connectDB();
 
 // Middleware
+
+
 app.use(cors());
 app.use(bodyParser.json());
 

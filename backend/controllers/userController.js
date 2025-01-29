@@ -2,7 +2,7 @@ const User = require('../models/userModel');
 
 // Controller function to create a new user
 const createUser = async(req, res) => {
-
+    console.log("in conteorller");
     try {
         const { name, email, message } = req.body;
 

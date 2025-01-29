@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import UserListIterate from "./UserListIterate";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const UserList = ({ onSelectUser }) => {
   const [users, setUsers] = useState([]);
@@ -12,7 +13,7 @@ const UserList = ({ onSelectUser }) => {
   const newStyle = { cursor: 'pointer', width: '60%', flex: 'display', justifyContent: 'center', marginLeft:'20%'}
   // Fetch all users
   useEffect(() => {
-    axios.get("http://localhost:5000/api/users")
+    axios.get(`${baseUrl}/api/users`)
       .then((response) => setUsers(response.data))
       .catch((error) => console.error("Error fetching users:", error));
   }, []);

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const UserDetails = ({ userId }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     if (userId) {
-      axios.get(`http://localhost:5000/api/users/${userId}`)
+      axios.get(`${baseUrl}/api/users/${userId}`)
         .then((response) => setUser(response.data))
         .catch((error) => console.error("Error fetching user details:", error));
     }
