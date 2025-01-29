@@ -25,4 +25,10 @@ it supports a basic user interface for displaying user details and performing up
 Clone the repository to your local machine using the following command:
 
 ```bash
-git clone 
+git clone https://github.com/Anil-Itagi/Assignment---Techbuds.git
+
+
+**### 2. To start the frontend**
+
+npm start
+ 
