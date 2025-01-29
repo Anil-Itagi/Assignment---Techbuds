@@ -57,17 +57,21 @@ File Structure
 The project is organized into the following structure:
 
 ## Frontend:
+
 components/: Contains all the React components that define the UI and functionality.
 HomePage: The main page divided into three columns for user selection, user list, and additional content.
 Navbar: The navigation bar with links to "Home", "All Users", "Create New User", and a "Service Test" to print a text in the console.
 UserDetails: Displays the details of a selected user.
 UserForm: A form for creating new users.
 UserListIterator: Displays the list of all users.
+
 ## Backend:
+
 routes/: Contains the routes for handling the API requests.
 users.js: API route for managing users (GET, POST, PUT, DELETE).
 models/: Contains the MongoDB models, including the User schema.
 User.js: Defines the schema for the User document in MongoDB.
+
 ## Notes:
 In the frontend, you will need to update the base URL for the API calls in the respective components (e.g., UserListIterate, UserForm, etc.) to match your backend URL.
 The backend should be connected to a MongoDB database. Ensure that the MONGO_URI in the .env file is correct and points to your MongoDB instance.
@@ -83,7 +87,7 @@ DELETE /api/users/:id: Delete a user by their ID.
 ## Design and UI
 The UI is designed using custom CSS (and optionally Bootstrap for layout). Below are some screenshots of the user interface:
 
-Home Page: Divided into three columns:
+**Home Page**: Divided into three columns:
 
 First column: Selected user details.
 Second column: List of all users.
@@ -97,5 +101,5 @@ User Form: A form to create new users with input fields for name, email, and mes
 User List Iterator: Displays all the users in a list format with options to update or delete each user.
 
 ## Reference
-Google: For syntax and examples.
-ChatGPT: For resolving complicated errors and getting solutions for certain issues.
+**Google**: For syntax and examples.
+**ChatGPT**: For resolving complicated errors and getting solutions for certain issues.
