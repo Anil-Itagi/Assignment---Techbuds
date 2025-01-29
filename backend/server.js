@@ -1,12 +1,13 @@
 // server/server.js
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;
 
 // Connect to the database
 connectDB();
