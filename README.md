@@ -20,7 +20,7 @@ Clone the repository to your local machine using the following command:
 
 bash
 
-git clone https://github.com/your-username/user-management-app.git
+git clone https://github.com/Anil-Itagi/Assignment---Techbuds.git
 ## 2. To Start the Frontend
 Navigate to the frontend folder and install the dependencies:
 
