@@ -31,4 +31,8 @@ git clone https://github.com/Anil-Itagi/Assignment---Techbuds.git
 **### 2. To start the frontend**
 
 npm start
+
+**### 3. TO start the Backend **
+
+npm start
  
