@@ -21,6 +21,7 @@ Clone the repository to your local machine using the following command:
 bash
 
 git clone https://github.com/Anil-Itagi/Assignment---Techbuds.git
+
 ## 2. To Start the Frontend
 Navigate to the frontend folder and install the dependencies:
 
@@ -29,6 +30,7 @@ bash
 cd frontend
 npm install
 npm start
+
 This will start the React application on your local machine.
 
 ## 3. To Start the Backend
@@ -38,6 +40,7 @@ bash
 
 cd backend
 npm install
+
 Next, create a .env file in the backend directory with the following values:
 
 bash
@@ -51,6 +54,7 @@ Now, start the backend server:
 bash
 
 npm start
+
 This will start the Node.js server on port 5000 by default, handling API requests for managing users.
 
 File Structure
